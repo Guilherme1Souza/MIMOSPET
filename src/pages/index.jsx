@@ -2,11 +2,10 @@ import { Container, Hero, StyledImage, About, DogImage, Title, Section, SectionT
 import { Nav } from "../components/nav";
 import Slider from "react-slick";
 
-import img1 from "../images/brinquedos.gif"
-import img2 from "../images/banho.gif"
-import img3 from "../images/farmacia.gif"
-import img4 from "../images/petiscos.gif"
-import img5 from "../images/racao.gif"
+import img1 from "../images/brinquedo_hero.png"
+import img2 from "../images/banho_hero.png"
+import img3 from "../images/racao_hero.png"
+import img4 from "../images/bifinho_hero.png"
 import imgDog from "../images/dog.png"
 import imgTeam from "../images/equipe.png"
 
@@ -38,9 +37,6 @@ export function Index() {
           </div>
           <div>
             <StyledImage src={img4} alt="Slide 4" />
-          </div>
-          <div>
-            <StyledImage src={img5} alt="Slide 5" />
           </div>
         </Slider>
       </Hero>

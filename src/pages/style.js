@@ -35,7 +35,7 @@ export const StyledImage = styled.img`
   height: auto;
   border-radius: 10px;
   object-fit: cover;
-  max-height: 400px; /* Padrão para telas grandes */
+  max-height: 400px;
 
   @media ${breakpoints.xxl} {
     max-height: 380px;
@@ -54,11 +54,11 @@ export const StyledImage = styled.img`
   }
 
   @media ${breakpoints.sm} {
-    max-height: 280px;
+    max-height: 300px;
   }
 
-  @media ${breakpoints.xs} {
-    max-height: 250px;
+  @media (max-width: ${breakpoints.xs}) {
+    max-height: 300px;
   }
 `;
 
