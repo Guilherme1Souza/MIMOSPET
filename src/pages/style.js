@@ -130,8 +130,9 @@ export const Title = styled.div`
   }
 
   @media (max-width: ${breakpoints.xs}) {
-    font-size: 1.6rem;
-    margin: 50px auto 0;
+    font-size: 1.4rem;
+    margin: 20px auto;
+    width: 220px;
   }
 `;
 
@@ -143,7 +144,6 @@ display: flex;
 
   @media (max-width: ${breakpoints.sm}) {
     flex-direction: column;
-    margin-left: 50px;
     flex-direction: column;
   }
 `;
@@ -198,8 +198,8 @@ export const Text = styled.p`
   }
 
   @media (max-width: ${breakpoints.xs}) {
-    width: 300px;
-    margin: 20px 20px 0 -20px;
+    width: 220px;
+    margin: 20px 20px 0 20px;
   }
   
 `;
@@ -247,7 +247,7 @@ export const TeamImage = styled.img`
   }
 
   @media (max-width: ${breakpoints.xs}) {
-    width: 320px;
-    margin: 20px 80px 0 -35px;
+    width: 250px;
+    margin: 20px 80px 0 -0px;
   }
 `;
