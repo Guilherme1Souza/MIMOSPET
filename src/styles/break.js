@@ -4,8 +4,7 @@ export const breakpoints = {
   md: '890px',
   lg: '1024px',
   xl: '1280px',
-  xxl: '1600px',
-  xxxl: '1920px',
+
 };
 
 export const media = {
@@ -14,6 +13,4 @@ export const media = {
   md: `(max-width: ${breakpoints.md})`,
   lg: `(max-width: ${breakpoints.lg})`,
   xl: `(max-width: ${breakpoints.xl})`,
-  xxl: `(max-width: ${breakpoints.xxl})`,
-  xxxl: `(max-width: ${breakpoints.xxxl})`,
 };

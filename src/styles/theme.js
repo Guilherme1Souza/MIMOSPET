@@ -8,6 +8,7 @@ export default {
       BORDER: "#27272A",
   
       PRIMARY: "#43C3D0",
+      SECONDARY: "#63978A",
       BLACK: "#000000",
       WHITE: "#E4E2E2",
       GRAY: "#333",

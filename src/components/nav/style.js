@@ -34,7 +34,8 @@ export const Navegação = styled.nav`
       justify-content: space-between;
       align-items: center;
       gap: 68px;
-      margin-left: auto;
+      margin-left: 50px;
+      padding-right: 60px;
       list-style: none;
 
       @media (max-width: ${breakpoints.xxxl}) {
@@ -93,7 +94,7 @@ export const Navegação = styled.nav`
           left: 0;
           width: 0;
           height: 2px;
-          background-color: ${({theme}) => theme.COLORS.PRIMARY};
+          background-color: ${({theme}) => theme.COLORS.SECONDARY};
           transition: width 0.3s ease-in-out;
         }
 
@@ -102,7 +103,7 @@ export const Navegação = styled.nav`
         }
 
         &:hover {
-          color: ${({theme}) => theme.COLORS.PRIMARY};
+          color: ${({theme}) => theme.COLORS.SECONDARY};
         }
       }
     }
@@ -160,7 +161,7 @@ export const Navegação = styled.nav`
       left: -100%;
       width: 50%;
       height: 80%;
-      background-color: ${({theme}) => theme.COLORS.PRIMARY};
+      background-color: ${({theme}) => theme.COLORS.TEXT};
       transition: left 0.3s ease-in-out;
       flex-direction: column;
       border-radius: 0 50px 50px 0;
