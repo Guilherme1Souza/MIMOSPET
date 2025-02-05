@@ -9,10 +9,8 @@ export default createGlobalStyle`
 
     body {
         color: ${({ theme }) => theme.COLORS.WHITE};
-
-    
-
         -webkit-font-smoothing: antialiased;
+      
     }
     @keyframes linearGradientAnimation {
   0% {

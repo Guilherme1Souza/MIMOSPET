@@ -21,7 +21,6 @@ export const Container = styled.div`
 `;
 
 export const Hero = styled.div`
-
 `
 
 export const Background = styled.div`
