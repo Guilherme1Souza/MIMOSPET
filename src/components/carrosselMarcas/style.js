@@ -10,7 +10,7 @@ export const CarouselContainer = styled.div`
 
   h2 {
     font-size: 2rem;
-    color: #fff;
+    color: ${({theme}) => theme.COLORS.WHITE};
     margin-bottom: 107px;
   }
 

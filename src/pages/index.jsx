@@ -32,6 +32,7 @@ import cardBanho from "../images/card_banho.png"
 import cardFarmacia from "../images/card_farmcia.png"
 import cardVariedades from "../images/card_variedades.png"
 import cardBrinquedos from "../images/card_brinquedos.png"
+import { Job } from "../components/trabalheConosco";
 
 
 export function Index() {
@@ -98,6 +99,7 @@ export function Index() {
       <About >
     <CarrosselMarcas></CarrosselMarcas>
       </About>
+      <Job></Job>
     </Container>
   );
 }
