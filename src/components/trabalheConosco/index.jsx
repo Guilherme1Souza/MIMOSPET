@@ -12,11 +12,11 @@ export function Job() {
 
     const onSubmit = async (data) => {
         try {
-            const response = await fetch("http://localhost:5000/send-email", {
+            const response = await fetch("/api/send-email", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(data),
-            });
+              });
 
             const result = await response.json();
             alert(result.message);
