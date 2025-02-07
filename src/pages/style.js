@@ -217,11 +217,12 @@ export const ValuesList = styled.ul`
 
 export const ValueItem = styled.li`
   margin: 0.5rem 0;
-  text-align: center;
+  
 
   @media (max-width: ${breakpoints.xs}) {
     width: 200px;
     margin: 20px auto;
+    text-align: center;
   }
 `;
 
