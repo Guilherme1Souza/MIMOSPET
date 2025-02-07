@@ -8,7 +8,9 @@ export const Container = styled.div`
     margin: 0 auto;
     flex-direction: column;
     background-color:#ffffff;
-    width: 80%;
+    overflow-x: hidden;
+   
+    width: 100%;
     height: 100vh;
     border-radius: 8px;
 
@@ -19,6 +21,10 @@ export const Container = styled.div`
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color:rgb(66, 66, 66);
     }
+
+    @media (max-width: ${breakpoints.xs}), (max-width: ${breakpoints.sm}), (max-width: ${breakpoints.lg}) {
+      padding-inline: 2.5rem;
+  }
 `;
 
 export const Hero = styled.div`
@@ -31,7 +37,8 @@ export const Background = styled.div`
 `;
 
 export const StyledImage = styled.img`
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   height: auto;
   border-radius: 10px;
   object-fit: cover;
@@ -63,15 +70,17 @@ export const StyledImage = styled.img`
 `;
 
 export const About = styled.div`
-  top: 420px;
-  max-width: 1200px;
+  margin-top: 400px;
+  max-width: 1600px;
   background-color: ${({ theme }) => theme.COLORS.SECONDARY};
   color: white;
   padding: 2.5rem;
   position: relative;
-  margin-bottom: 450px;
+  margin-bottom: 250px;
   text-align: center;
   border-radius: 8px;
+
+ 
 
   @media (max-width: ${breakpoints.lg}) {
     display: flex;
@@ -86,6 +95,8 @@ export const About = styled.div`
     display: flex;
     flex-direction: column;
     padding: 10px;
+    margin-top: 300px;
+    margin-bottom: 150px;
   }
 `;
 
@@ -101,7 +112,7 @@ export const DogImage = styled.img`
   }
 
   @media (max-width: ${breakpoints.lg}) {
-    right: -20px;
+    right: -80px;
   }
 
   @media (max-width: ${breakpoints.sm}) {
@@ -171,7 +182,6 @@ export const Subtitle = styled.h2`
   @media (max-width: ${breakpoints.xs}) {
     width: 320px;
     margin: 0 auto;
-    text-align: center;
   }
 `;
 
@@ -186,7 +196,6 @@ export const SubtitleTwo = styled.h2`
   @media (max-width: ${breakpoints.xs}) {
     width: 320px;
     margin: 0 auto;
-    text-align: center;
   }
 `;
 
@@ -202,13 +211,14 @@ export const Text = styled.p`
 
   @media (max-width: ${breakpoints.sm}) {
     width: 480px;
+    text-align: start;
     
   }
 
   @media (max-width: ${breakpoints.xs}) {
     width: 220px;
-    margin: 20px auto;
-    text-align: center;
+    margin: 20px 115px  20px auto ;
+    text-align: start;
   }
   
 `;
@@ -221,7 +231,7 @@ export const ValuesList = styled.ul`
 
   @media (max-width: ${breakpoints.xs}) {
     width: 200px;
-    margin: 20px auto;
+    margin: 20px 0;
   }
 `;
 
@@ -232,54 +242,55 @@ export const ValueItem = styled.li`
   @media (max-width: ${breakpoints.xs}) {
     width: 200px;
     margin: 20px auto;
-    text-align: center;
+    text-align: start;
   }
 `;
 
 export const TeamImage = styled.img`
   margin-top: 4.5rem;
-  margin-left: 4.5rem;
+  margin-left: 12.5rem;
   border-radius: 0.5rem;
   width: 24rem;
   height: auto;
 
   @media (max-width: ${breakpoints.xl}) {
-    margin: 200px 90px 0 -150px;
+    margin: 200px 90px 0 50px;
   }
 
   
   @media (max-width: ${breakpoints.lg}) {
     width: 350px;
-    margin: 200px 90px 0 -280px;
+    margin: 200px 90px 0 -200px;
   }
 
   @media (max-width: ${breakpoints.md}) {
     width: 320px;
-    margin: 200px 90px 0 -350px;
+    margin: 200px 90px 0 -300px;
   }
 
   @media (max-width: ${breakpoints.sm}) {
-    margin: 20px auto;
+    margin: -80px 0 30px 300px;
   }
 
   @media (max-width: ${breakpoints.xs}) {
     width: 250px;
-    margin: 20px auto;
+    margin: 20px auto 10px -10px;
   }
 `;
 
 export const Services = styled.div`
-
-   margin-top: 171px;
-   margin-bottom: 86px;
-   margin-left: 92px;
+   font-size: 32px;
+   margin: 80px auto;
 
   h3 {
     color: ${({ theme }) => theme.COLORS.GRAY_400};
-    font-size: 2.8125rem;
-  }
+    margin: 0 auto;
 
- 
+    @media (max-width: ${breakpoints.xs}) {
+      font-size: 1.6rem;
+    }
+   
+  }
 
   @media (max-width: ${breakpoints.xs}) {
     display: flex;

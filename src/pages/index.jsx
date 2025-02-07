@@ -19,6 +19,7 @@ import {
 } from "./style";
 
 import { Nav } from "../components/nav";
+import { CarrosselMarcas } from "../components/carrosselMarcas";
 import Slider from "react-slick";
 
 import img1 from "../images/brinquedo_hero.png"
@@ -88,13 +89,15 @@ export function Index() {
       <Services>
         <h3>Nossos serviços</h3>
       </Services>
-
       <ServicesGrid>
         <ServicesImg src={cardBanho} alt="Card de banho e tosa" />
         <ServicesImg src={cardFarmacia} alt="Card de banho e tosa" />
         <ServicesImg src={cardVariedades} alt="Card de banho e tosa" />
         <ServicesImg src={cardBrinquedos} alt="Card de banho e tosa" />
       </ServicesGrid>
+      <About >
+    <CarrosselMarcas></CarrosselMarcas>
+      </About>
     </Container>
   );
 }
