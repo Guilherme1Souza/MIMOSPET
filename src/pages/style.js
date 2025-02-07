@@ -109,7 +109,7 @@ export const DogImage = styled.img`
 
   @media (max-width: ${breakpoints.xs}) {
     width: 15rem;
-    right: -50px;
+    right: -40px;
     top: -200px;
   }
 `;
@@ -167,7 +167,7 @@ export const Subtitle = styled.h2`
 
   
   @media (max-width: ${breakpoints.xs}) {
-    width: 320px;
+    width: 200px;
     margin-left: 20px;
     margin-bottom: 20px;
   }
@@ -180,7 +180,7 @@ export const SubtitleTwo = styled.h2`
   margin-top: 6.5rem;
 
   @media (max-width: ${breakpoints.xs}) {
-    width: 320px;
+    width: 200px;
     margin-left: 20px;
   }
 `;
@@ -210,16 +210,17 @@ export const ValuesList = styled.ul`
   padding: 0;
 
   @media (max-width: ${breakpoints.xs}) {
-    width: 320px;
-    margin: 0 auto;
+    width: 200px;
+    margin: 20px 30px 0 0;
   }
 `;
 
 export const ValueItem = styled.li`
   margin: 0.5rem 0;
+  text-align: center;
 
   @media (max-width: ${breakpoints.xs}) {
-    width: 320px;
+    width: 200px;
     margin: 20px auto;
   }
 `;
@@ -247,6 +248,6 @@ export const TeamImage = styled.img`
 
   @media (max-width: ${breakpoints.xs}) {
     width: 250px;
-    margin: 20px 80px 0 -0px;
+    margin: 20px 100px 0 -10px;
   }
 `;
