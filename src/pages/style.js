@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import homeImg from "../images/logomimos.png"
 import { breakpoints } from "../styles/break";
+import { TbSquareLetterYFilled } from "react-icons/tb";
 
 export const Container = styled.div`
     display: flex;
@@ -68,6 +69,7 @@ export const About = styled.div`
   color: white;
   padding: 2.5rem;
   position: relative;
+  margin-bottom: 450px;
   text-align: center;
   border-radius: 8px;
 
@@ -167,9 +169,9 @@ export const Subtitle = styled.h2`
 
   
   @media (max-width: ${breakpoints.xs}) {
-    width: 200px;
-    margin-left: 20px;
-    margin-bottom: 20px;
+    width: 320px;
+    margin: 0 auto;
+    text-align: center;
   }
 `;
 
@@ -179,9 +181,12 @@ export const SubtitleTwo = styled.h2`
   font-weight: 600;
   margin-top: 6.5rem;
 
+  
+
   @media (max-width: ${breakpoints.xs}) {
-    width: 200px;
-    margin-left: 20px;
+    width: 320px;
+    margin: 0 auto;
+    text-align: center;
   }
 `;
 
@@ -191,6 +196,10 @@ export const Text = styled.p`
   font-size: 1.125rem;
   width: 650px;
 
+  @media (max-width: ${breakpoints.md}) {
+    width: 620px;
+  }
+
   @media (max-width: ${breakpoints.sm}) {
     width: 480px;
     
@@ -198,7 +207,8 @@ export const Text = styled.p`
 
   @media (max-width: ${breakpoints.xs}) {
     width: 220px;
-    margin: 20px 20px 0 20px;
+    margin: 20px auto;
+    text-align: center;
   }
   
 `;
@@ -211,7 +221,7 @@ export const ValuesList = styled.ul`
 
   @media (max-width: ${breakpoints.xs}) {
     width: 200px;
-    margin: 20px 30px 0 0;
+    margin: 20px auto;
   }
 `;
 
@@ -243,12 +253,61 @@ export const TeamImage = styled.img`
     margin: 200px 90px 0 -280px;
   }
 
+  @media (max-width: ${breakpoints.md}) {
+    width: 320px;
+    margin: 200px 90px 0 -350px;
+  }
+
   @media (max-width: ${breakpoints.sm}) {
-    margin: 50px;
+    margin: 20px auto;
   }
 
   @media (max-width: ${breakpoints.xs}) {
     width: 250px;
-    margin: 20px 100px 0 -10px;
+    margin: 20px auto;
   }
+`;
+
+export const Services = styled.div`
+
+   margin-top: 171px;
+   margin-bottom: 86px;
+   margin-left: 92px;
+
+  h3 {
+    color: ${({ theme }) => theme.COLORS.GRAY_400};
+    font-size: 2.8125rem;
+  }
+
+ 
+
+  @media (max-width: ${breakpoints.xs}) {
+    display: flex;
+    margin: 80px auto;
+    text-align: center;
+  }
+`;
+
+export const ServicesGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  grid-template-rows: repeat(2, auto);
+  gap: 23px;
+  justify-content: center;
+  width: 100%;
+
+  @media (max-width: ${breakpoints.sm}), (max-width: ${breakpoints.md}), (max-width: ${breakpoints.lg}), (max-width: ${breakpoints.xl}) {
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: repeat(2, auto);
+  }
+
+  @media (max-width: ${breakpoints.xs}) {
+   grid-template-columns: 1fr;
+}
+`
+
+export const ServicesImg = styled.img`
+  width: 303px;
+  height: 189px;
+  margin: 0 auto;
 `;

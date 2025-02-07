@@ -17,14 +17,14 @@ export const Navegação = styled.nav`
       height: 25px;
     padding: 5px;
     cursor: pointer;
-    color: ${({theme}) => theme.COLORS.BLACK};
+    color: ${({theme}) => theme.COLORS.GRAY_400};
 
     &:hover {
       color: ${({theme}) => theme.COLORS.PRIMARY};
       cursor: pointer;
     }
 
-    @media (max-width: ${breakpoints.xs}), (max-width: ${breakpoints.md}) {
+    @media (max-width: ${breakpoints.xs}) {
   display: none;
 }
 
@@ -61,7 +61,8 @@ export const Navegação = styled.nav`
       }
 
       @media (max-width: ${breakpoints.md}) {
-       margin-left: 0px;
+       margin-left: 50px;
+       padding-right: 20px;
       }
 
       @media (max-width: ${breakpoints.sm}) {
@@ -79,7 +80,7 @@ export const Navegação = styled.nav`
       }
 
       li a, li button {
-        color: #333;
+        color: ${({theme}) => theme.COLORS.GRAY_400};
         background: transparent;
         border: none;
         text-decoration: none;

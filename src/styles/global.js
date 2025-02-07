@@ -10,6 +10,7 @@ export default createGlobalStyle`
     body {
         color: ${({ theme }) => theme.COLORS.WHITE};
         -webkit-font-smoothing: antialiased;
+        font-family: "Montserrat", serif;
       
     }
     @keyframes linearGradientAnimation {
@@ -24,7 +25,6 @@ export default createGlobalStyle`
   }
 }
     body, input, button, textarea {
-        font-family: "Roboto Slab", serif;
         font-size: 16px;
         outline: none;
     }
