@@ -4,11 +4,11 @@ import Slider from "react-slick";
 
 export function CarrosselMarcas() {
     const brands = [
-        { name: "Golden", src: "/src/images/golden.png" },
-        { name: "Magnus", src: "/src/images/magnus.png" },
-        { name: "Fórmula Natural", src: "/src/images/fmnatura.png" },
-        { name: "Origens", src: "/src/images/origens.png" },
-        { name: "Purina", src: "/src/images/purina.png" },
+        { name: "Golden", src: "/public/golden.png" },
+        { name: "Magnus", src: "/public/magnus.png" },
+        { name: "Fórmula Natural", src: "/public/fmnatura.png" },
+        { name: "Origens", src: "/public/origens.png" },
+        { name: "Purina", src: "/public/purina.png" },
     ];
 
     const settings = {
