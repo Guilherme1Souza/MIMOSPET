@@ -57,6 +57,13 @@ export function Job() {
                     <textarea {...register("mensagem", { required: "Mensagem é obrigatória", minLength: { value: 10, message: "A mensagem deve ter pelo menos 10 caracteres" } })} placeholder="Mensagem" />
                     {errors.mensagem && <ErrorText>{errors.mensagem.message}</ErrorText>}
                 </div>
+                <div>
+                <input
+                    type="file"
+                    accept=".pdf,.jpg,.png"
+                    {...register("arquivo", { required: "Arquivo é obrigatório" })}
+                />
+                </div>
                 <button type="submit" disabled={isSubmitting}>
                     {isSubmitting ? "Enviando..." : "Enviar formulário"}
                 </button>
