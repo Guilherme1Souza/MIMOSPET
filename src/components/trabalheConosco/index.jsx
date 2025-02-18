@@ -1,43 +1,27 @@
 import { useForm } from "react-hook-form";
-import { FormContainer, FormStyled, ErrorText } from "./style";
-
+import { FormContainer, FormStyled, ErrorText } from "./style"
 export function Job() {
     const {
         register,
         handleSubmit,
         reset,
         formState: { errors, isSubmitting },
-        watch,
     } = useForm();
-
     const onSubmit = async (data) => {
-        const formData = new FormData();
-        formData.append("nome", data.nome);
-        formData.append("sobrenome", data.sobrenome);
-        formData.append("email", data.email);
-        formData.append("assunto", data.assunto);
-        formData.append("mensagem", data.mensagem);
-
-        const arquivo = watch("arquivo")[0]; // Captura o arquivo enviado
-        if (arquivo) {
-            formData.append("arquivo", arquivo);
-        }
-
         try {
-            const response = await fetch("/api/send-email", {
+            const response = await fetch("http://localhost:5000/send-email", {
                 method: "POST",
-                body: formData, // Usando FormData ao invés de JSON
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
             });
-
             const result = await response.json();
             alert(result.message);
-            reset();
+            reset(); 
         } catch (error) {
             alert("Erro ao enviar o formulário.");
             console.error(error);
         }
     };
-
     return (
         <FormContainer>
             <FormStyled onSubmit={handleSubmit(onSubmit)}>
@@ -65,22 +49,8 @@ export function Job() {
                     {errors.assunto && <ErrorText>{errors.assunto.message}</ErrorText>}
                 </div>
                 <div>
-                    <textarea
-                        {...register("mensagem", {
-                            required: "Mensagem é obrigatória",
-                            minLength: { value: 10, message: "A mensagem deve ter pelo menos 10 caracteres" },
-                        })}
-                        placeholder="Mensagem"
-                    />
+                    <textarea {...register("mensagem", { required: "Mensagem é obrigatória", minLength: { value: 10, message: "A mensagem deve ter pelo menos 10 caracteres" } })} placeholder="Mensagem" />
                     {errors.mensagem && <ErrorText>{errors.mensagem.message}</ErrorText>}
-                </div>
-                <div>
-                    <input
-                        type="file"
-                        accept=".pdf,.jpg,.png"
-                        {...register("arquivo", { required: "Arquivo é obrigatório" })}
-                    />
-                    {errors.arquivo && <ErrorText>{errors.arquivo.message}</ErrorText>}
                 </div>
                 <button type="submit" disabled={isSubmitting}>
                     {isSubmitting ? "Enviando..." : "Enviar formulário"}

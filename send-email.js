@@ -3,7 +3,7 @@ import formidable from "formidable";
 import fs from "fs";
 
 export const config = {
-  api: { bodyParser: false }, // Desativa o bodyParser padrão do Next.js
+  api: { bodyParser: false }
 };
 
 export default async function handler(req, res) {
@@ -31,14 +31,6 @@ export default async function handler(req, res) {
         to: process.env.EMAIL_DESTINO,
         subject: assunto,
         text: `Nome: ${nome} ${sobrenome}\nEmail: ${email}\nMensagem: ${mensagem}`,
-        attachments: arquivo
-          ? [
-              {
-                filename: arquivo.originalFilename,
-                content: fs.readFileSync(arquivo.filepath),
-              },
-            ]
-          : [],
       };
 
       try {
