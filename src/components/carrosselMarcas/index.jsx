@@ -42,7 +42,7 @@ export function CarrosselMarcas() {
                         </BrandSlide>
                     ))}
                 </Slider>
-                <DogImage src="/dogEspiao.png" alt="Cachorro" />
+                <DogImage src="/dogEspiao.png" alt="Cachorro espiando a tela" />
             </CarouselContainer>
         )
     };

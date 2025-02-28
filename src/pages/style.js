@@ -76,7 +76,6 @@ export const About = styled.div`
   color: white;
   padding: 2.5rem;
   position: relative;
-  margin-bottom: 250px;
   text-align: center;
   border-radius: 8px;
 

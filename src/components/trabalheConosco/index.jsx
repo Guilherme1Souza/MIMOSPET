@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { FormContainer, FormStyled, ErrorText } from "./style"
+import { FormContainer, FormStyled, ErrorText, CatJob } from "./style"
 export function Job() {
     const {
         register,
@@ -56,6 +56,7 @@ export function Job() {
                     {isSubmitting ? "Enviando..." : "Enviar formulário"}
                 </button>
             </FormStyled>
+            <CatJob src="/catjob.png" alt=""/>
         </FormContainer>
     );
 }
